@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 96.5% );
+}
+
+.container {
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1{
+    color: white;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#restartButton {
+  margin: 8px;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #f8f7f4;
+  position: relative;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+#restartButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+#restartButton:hover {
+  color: #e8e8e8;
+}
+
+#restartButton:hover::before {
+  width: 100%;
+}
+
+#statusMessage {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bolder;
+
+}
+
